@@ -3,45 +3,6 @@
                     **P04_PathFinding**
 
 
-<!--
-
-General
-========
-
-For each of your team's implementations, explain the following (where appropriate and applicable):
-
-- details on calling conventions, input and output data formats, limitations, bugs, and special features.
-- negative aspects of your program (limitations, known bugs)
-- positive aspects (extensions, special features)
-- describe your choice of modularization (abstractions), data structures, and algorithms
-- explain anything you did that is likely to be different from what other students may have done
-- justify any design decisions for which the rationale isn't immediately clear
-
-Feel free to modify the structure of this `readme.html` file to fit the current assignment and to fit how you wish to present your findings.
-
-
-!!! note: Math Typesetting
-    Surround your math with double dollar signs to have [MathJax](https://www.mathjax.org/) typeset it beautifully.
-    To add a tilde in math mode (using dollar signs), use the `\sim` command.
-    If an exponent has more than one character, you must surround it with curly braces.
-    In the example below, the exponent for $T$ must use curly braces, but they aren't required for $N$.
-
-    $$ \sim T^{1.2} N^2 $$
-
-    Note: Typesetting like this is optional; feel free to use plain text if you'd like.
-
-
-Submission
------------
-
-Use the CSE LogHistory Plug-in to create a zip file containing all your code, this `readme.html` document, and any additional files of evidence (ex: screenshots).
-If you create a zip by other means, it will include all the files under `tests` and might miss some important files (ex: `.log/history.log`).
-The former will make for a very large zip file; the latter will cause you to lose points.
-
-
--->
-
-
 
 Author
 =============
@@ -55,7 +16,7 @@ Author
 ------------------|-------------
 name              | Rose White
 computer + OS     | Personal Windows 10 Lab top computer
-time to complete  | <!-- ... -->
+time to complete  | 1 week
 partner           | None
 additional help   | Dr. Denning, CSE Study Tables
 </div>
@@ -69,14 +30,6 @@ Implementations
 Pathfinding Implementation
 ----------------------------
 
-<!--
-Explain briefly how you implemented the Pathfinding data type.
-How did you check that your implementation was correct?
-
-Briefly explain how you represented the search node PFNode.
-
-Include code listings, screenshots, diagrams, etc. if helpful.
--->
 
 I implemented this data type by utilizing a priority queue and stack to track the positions of where the walker
 traversed. I then implemented the checks to make sure that I was not doing anything illegal.
@@ -88,20 +41,13 @@ travel difficulty/ cost.
 Walker Implementation
 -----------------------
 
-<!--
-Explain briefly how you implemented the Walker data type.
-How did you test the correctness of your algorithm?
--->
-
 For the walker implementation, I threw the path iterable into an iterator. Then I just "walked" through the maze
 by using "iterator.next()". This allowed me to go through each space one by one.
 
 Analysis
 =============
 
-<!--
-For each of the following maps and given the default starting and ending locations, give the estimated travel cost ($\text{cost}_0(E)$) and search size for different heuristic values ($h$).
--->
+
 
 map      | h   | cost | search
 ---------|-----|------|--------
@@ -115,11 +61,6 @@ usa128   |    0|1.7x10^10|   55%
 usa256   |    0|2x10^10|     65%
 usa1024  |    0|1.5x10^7|    50%
 
-
-<!--
-Given the information above, do you notice any patterns?
-Is there a value of $h$ that seems to work best?
--->
 
 
 
@@ -142,21 +83,6 @@ Reflection
 Critical Thinking
 -------------------
 
-<!--
-Did you use any of the CT Skills?
-If so, which ones did you use, and how did you use them?
-If not, explain what you did when you needed help.
-Or, did you not need help?
-
-- consulting an expert
-- asking good questions
-- edge cases
-- similar problems / fewer variables
-- developing subgoals
-
-
-What did you do to monitor your progress and make sure you did not spend more time than necessary on this assignment?
--->
 
 I consulted an expert, Dr. Denning, to help me understand the concept of a minimum priority queue. I asked good
 questions, like "why is the search path going around the outside of the maze when I have the heuristics set? Is there an
@@ -167,37 +93,12 @@ I checked edge cases by implementing the checks and then feeding the program var
 Help
 -----------
 
-<!--
-Describe whatever help (if any) that you received.
-Don't include readings, lectures, but do include any help from people (including course staff, lab TAs, classmates, and friends) and attribute them by name.
-How did you discuss the problem with others? (ex: white-board algorithms, looking over code for bugs, looking at print out results, etc.)
--->
-
 I received conceptual help as well as debugging help from Dr. Denning. He helped me understand the function of the
 priority queue and how to link it with the 2D-array.
 
 I also received conceptual from the CSE help desks. They would look at my code after I asked them my specific questions
 and would try to point me in the right direction. They also helped me with java syntax.
 
-
-
-<!--
-Since this is an individual assignment, if you worked with a partner, assert below that the work you are turning in is your own work, and that you only did "whiteboard" work as a group.
-Give one sentence explaining what each of you contributed.
-If you used the code from the lab challenge, explain what is shared between you and your lab partner.
--->
-
-The work I am turning in is my own. I did talk about concepts with my friends Daniel and Courtney, but we did our
-individual work.
-
-
-
-<!--
-Describe any serious problems you encountered.
-How much time did you spend writing new code, debugging code, thinking about the algorithms, discussing with someone else, running tests, writing comments and documentation, etc.?
-List any other comments here.
-Feel free to provide any feedback on how much you learned from doing the assignment, and whether you enjoyed doing it.
--->
 
 I struggled a long time with getting my program to recognize the cost value of each path location. It just ran along the
 outside of the maze in the most efficient way with the heights ignored.
